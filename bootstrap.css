@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: Helvetica, sans-serif;
+    font-weight: 100;
+}
+
+#menu ul {
+    margin:-10;
+    padding-left: 25px;
+    list-style: none;
+    margin-left: 85px;
+}
+#menu li{
+    display: inline;
+}
+header{
+    background: #222222;
+}
+
+#menu a {
+    float: left;
+    padding: 16px 10px 33  10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #9D9D9D;
+    height: 12px;
+    
+}
+#one{
+    margin: -1;
+    
+}
+
+#menu a:hover{
+    color: #778899;
+    
+}
+#menu  .active a  {
+   background: #080808;
+    margin: 0px;
+    height: 11px;
+    color: white
+}
+#menu{
+    background: #222222;
+    padding: 10 2 50 0
+}
+
+
+.temp {
+    color: #333333;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.temp h1{
+    font-size: 27;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+p {
+    font-size: 20;
+}
+#news{   
+    
+    padding: 0 0 0 40;
+    background:#333;  
+    width:33%;  
+    height:55%; 
+    float:right;
+    color: #EFFFFF;
+}  
+#news h3{ 
+    font-size: 15;
+    color: #6B8D9D;
+    margin-left: -23px;
+    
+}
+#block{
+    margin-left: -38px;
+}
+#onewords{
+    font-weight: 700;
+    font-size: 18;
+    color: #91C0D5;
+    
+}
+#content{ 
+    background:oldlace;  
+    width:64%;  
+    height:55%;  
+    float:left;
+}  
+#content > p{
+    font-size: 15;
+    
+}
+.table > * {
+    width: 100%;
+    border: 2px solid #236;
+}
+#temz {
+    font-size: 32px;
+    margin-left: 200px;
+}
