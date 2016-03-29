@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head align="auto">
+    <meta charset="utf-8"> @dukerozen
+    <link rel="stylesheet" href="todolist.css">
+
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <h1>Мiй список задач</h1>
+    <div class="list" id="list">
+
+
+    </div>
+    <input type="text" id="task" placeholder="Введіть назву задачі" />
+    <button class="add" onclick="add()">Натиснiть, щоб додати</button>
+    <script>
+        function add() {
+            var elemets = document.getElementById('list');
+            var task = document.getElementById('task');
+            var el = document.createElement("li");
+            if (task.value != '') {
+                el.innerHTML = '<p>' + task.value + '</p>' + '<button class="delete" onclick="del()">Натиснiть, щоб видалити</button>';
+                elemets.appendChild(el);
+                task.value = '';
+            }
+        }
+
+        function del() {
+            var button = event.target;
+            button.parentElement.remove();
+        }
+    </script>
+</body>
+
+</html>
