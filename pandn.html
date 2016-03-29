@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" /> @dukerozen
+    <title>Парнi i непарнi</title>
+    <link rel="stylesheet" href="pandn.css" />
+    <center><h1>Калькулятор суми всіх парних і непарних чисел</h1></center>
+</head>
+
+<body>
+    <script>
+        function myFunctionSumm() {
+            var first = document.getElementById('first').value;
+            var second = document.getElementById('second').value;
+            var SEven = 0;
+            var SOdd = 0;
+            for (var i = parseInt(first); i < (parseInt(second) + 1); i++) {
+                if (first % 2 == 0) {
+                    SEven += parseInt(first);
+                } else {
+                    SOdd += parseInt(first);
+                }
+                first++;
+            }
+            document.getElementById('SummEven').innerHTML = 'Сума парних чисел дорівнює ' + SEven;
+            document.getElementById('SummOdd').innerHTML = 'Сума непарних чисел дорівнює ' + SOdd;
+        }
+    </script>
+
+    <div class="main">
+        <div class="parni" align="center">
+            <input type="text" id="first" placeholder="Введiть а" required>
+            <input type="text" id="second" placeholder="Введiть b" required>
+            <br>
+            <button id="ress" onclick="myFunctionSumm()">Натиснiть щоб розв'язати</button>
+            <p id="SummEven"></p>
+            <p id="SummOdd"></p>
+
+
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
