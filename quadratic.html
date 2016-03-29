@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" /> @dukerozen
+    <title>Квадратне рівняння</title>
+    <link rel="stylesheet" href="quadratic.css" />
+
+    <script>
+        function kvadrt() {
+            d = document
+            var a = Number(d.form1.num1.value)
+            var b = Number(d.form1.num2.value)
+            var c = Number(d.form1.num3.value)
+            var diz = eval(Math.pow(b, 2) - 4 * a * c)
+            var e = eval((-b + Math.sqrt(diz)) / (2 * a))
+            var e1 = eval((-b - Math.sqrt(diz)) / (2 * a))
+            var e2 = eval(-c / b)
+            var e3 = eval(-b / 2 * a)
+            var x1 = Number(d.form1.x1.value)
+            var x2 = Number(d.form1.x2.value)
+            if (a == 0 && b == 0 && c == 0) {
+                x1 = "x належить R";
+                x2 = "x належить R";
+            } else
+            if (a == 0 && b == 0 && c != 0) {
+                x1 = "Рішень нема";
+                x2 = "Рішень нема";
+            } else
+            if (a == 0 && b != 0 && c != 0) {
+                x1 = eval(e2);
+                x2 = " ";
+            } else
+            if (a != 0 && diz > 0) {
+                x1 = eval(e);
+                x2 = eval(e1);
+            } else
+            if (a != 0 && diz == 0) {
+                x1 = eval(e3);
+                x2 = " ";
+            } else {
+                x1 = "Рішень немає";
+                x2 = "Рішень немає";
+            }
+            d.form1.x1.value = x1;
+            d.form1.x2.value = x2;
+        }
+    </script>
+</head>
+
+<body>
+    <center>Калькулятор квадратних рiвнянь
+        <p>
+            <br>
+            <form name="form1">
+                Введіть a, b та c:
+                <br>
+                <br> a =
+                <input type="text" name="num1" size="4"> b =
+                <input type="text" name="num2" size="4"> c =
+                <input type="text" name="num3" size="4">
+                <br>
+                <br>
+                <input type="button" value="Натиснiть щоб розв'язати" onClick="kvadrt()" />
+                <br>
+                <br> x1 =
+                <input type "text" name="x1" size="20"> 
+                <br> x2 =
+                <input type "text" name="x2" size="20">
+                <br>
+                <br>
+                <input type="button" value="Натиснiть, щоб стерти" onClick="reset()" />
+    </center>
+    </form>
+</body>
+
+</html>
